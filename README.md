@@ -90,3 +90,6 @@ We welcome pull requests for improvements, bug fixes, and new features. Please f
 **License:**
 
 This project is licensed under the (insert your preferred license, e.g., MIT, Apache). See the `LICENSE` file for details.
+
+Project Helper videos: 
+https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54
