@@ -6,14 +6,12 @@ import (
 )
 
 func setupRoutes(app *fiber.App) {
-	// Tasks endpoints
 	app.Get("/tasks", handlers.GetTasks)
 	app.Post("/tasks", handlers.CreateTask)
 	app.Get("/tasks/:id", handlers.GetTask)
 	app.Put("/tasks/:id", handlers.UpdateTask)
 	app.Delete("/tasks/:id", handlers.DeleteTask)
 
-	// Users endpoints
 	app.Get("/users", handlers.GetUsers)
 	app.Post("/users", handlers.CreateUser)
 	app.Get("/users/:id", handlers.GetUser)
