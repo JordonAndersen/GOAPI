@@ -9,7 +9,8 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/src/app
-    command: air ./cmd/main.go -b 0.0.0.0
+      - air-config:/root/.air
+    command: air
     depends_on:
       - db
 
@@ -27,3 +28,4 @@ services:
 
 volumes:
   mariadb-data:
+  air-config:
