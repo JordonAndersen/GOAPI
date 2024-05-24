@@ -26,7 +26,7 @@ An initial backend development for the task management Go app has been completed
 
 **Cloning Your Fork:**
 
-1. Once forked, clone your copy of the repository to your local machine using Git:
+Once forked, clone your copy of the repository to your local machine using Git:
 
    ```bash
    git clone https://github.com/<your-username>/<your-GOAPI-FORK>
@@ -86,4 +86,5 @@ Implement unit and integration tests to ensure code functionality and database i
 Enhance security by implementing token-based authentication for user access control. This can be achieved using JWT (JSON Web Tokens) or OAuth2.
 
 
-**Project helper videos:** https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54
+Project Helper videos: 
+https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54
