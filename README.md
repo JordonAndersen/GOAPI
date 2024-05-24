@@ -1,5 +1,6 @@
 **Project Name:** Task Management System
 
+
 **Description:**
 
 This project implements a task management system using Go and MariaDB. Users can:
@@ -11,6 +12,7 @@ This project implements a task management system using Go and MariaDB. Users can
 
 - **Basic User Management:** CRUD operations for user profiles.
 - **Task Management:** CRUD operations for tasks.
+
 
 
 **Project Setup:**
@@ -33,10 +35,10 @@ Once forked, clone your copy of the repository to your local machine using Git:
    cd <your-GOAPI-FORK>
    ```
 
-
 **Dependencies:**
 
 The project's dependencies are managed using Go modules (go.mod). No additional steps are required to download dependencies; they will be automatically downloaded when you run the project.
+
 
 **Running the Application:**
 
@@ -47,6 +49,7 @@ The project's dependencies are managed using Go modules (go.mod). No additional 
    ```
 
    This will start the Go API server, connecting to the MariaDB instance.
+
 
 **API Endpoints:**
 
@@ -62,10 +65,9 @@ The project's dependencies are managed using Go modules (go.mod). No additional 
 | `/users/:id` | GET    | Retrieves details for a specific user.                                    |
 | `/users/:id` | PUT    | Updates details for a specific user.                                      |
 | `/users/:id` | DELETE | Deletes a specific user.                                                  |
-                                  |
 
 
-## Improvement Enhancements
+## Improvement and Enhancements
 
 **Tasks Remaining:**
 
@@ -86,5 +88,6 @@ Implement unit and integration tests to ensure code functionality and database i
 Enhance security by implementing token-based authentication for user access control. This can be achieved using JWT (JSON Web Tokens) or OAuth2.
 
 
-Project Helper videos: 
+
+**Project Helper videos:**
 https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54
