@@ -11,5 +11,11 @@ func main() {
 
 	setupRoutes(app) // Set up the API routes
 
+	//cors config
+	app.Use(cors.New(cors.Config{
+		AllowOrigins:"http://localhost:3000",
+		AllowHeaders: "Origin,Content-Type, Accept"
+	}))
+
 	app.Listen("0.0.0.0:3000") // Start the server on port 3000
 }
