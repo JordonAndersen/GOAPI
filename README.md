@@ -1,4 +1,4 @@
-**Project Name:** Task Management System
+# GO Taskify - RESTful Task Management System
 
 **Description:**
 
@@ -12,11 +12,6 @@ This project implements a task management system using Go and MariaDB. Users can
 - **Basic User Management:** CRUD operations for user profiles.
 - **Task Management:** CRUD operations for tasks.
 
-## Project Setup
-
-**Backend Development:**
-
-An initial backend development for the task management Go app has been completed.
 
 ## Database Schema
 
@@ -42,6 +37,29 @@ An initial backend development for the task management Go app has been completed
 | CreatedAt    | time.Time  | Creation timestamp                       |
 | UpdatedAt    | time.Time  | Last update timestamp                    |
 
+
+## API Endpoints
+
+| Endpoint     | Method | Description                                                               |
+|--------------|--------|---------------------------------------------------------------------------|
+| `/tasks`     | GET    | Retrieves a list of all tasks.                                            |
+| `/tasks`     | POST   | Creates a new task. Requires title, description, and status in the request body. |
+| `/tasks/:id` | GET    | Retrieves details for a specific task.                                    |
+| `/tasks/:id` | PUT    | Updates details for a specific task.                                      |
+| `/tasks/:id` | DELETE | Deletes a specific task.                                                  |
+| `/users`     | GET    | Retrieves a list of all users.                                            |
+| `/users`     | POST   | Creates a new user. Requires username, email, and password in the request body. |
+| `/users/:id` | GET    | Retrieves details for a specific user.                                    |
+| `/users/:id` | PUT    | Updates details for a specific user.                                      |
+| `/users/:id` | DELETE | Deletes a specific user.             
+
+
+## Project Setup
+
+**Backend Development:**
+
+An initial backend development for the task management Go app has been completed.
+
 **Forking the Repository:**
 
 1. Visit the project repository on GitHub: [GOAPI](https://github.com/JordonAndersen/GOAPI)
@@ -60,32 +78,13 @@ Once forked, clone your copy of the repository to your local machine using Git:
 
 The project's dependencies are managed using Go modules (go.mod). No additional steps are required to download dependencies; they will be automatically downloaded when you run the project.
 
-
-**Running the Application:**
-
 **Start the Server:**
 
    ```bash
    docker-compose up --build
    ```
 
-   This will start the Go API server, connecting to the MariaDB instance.
-
-
-**API Endpoints:**
-
-| Endpoint     | Method | Description                                                               |
-|--------------|--------|---------------------------------------------------------------------------|
-| `/tasks`     | GET    | Retrieves a list of all tasks.                                            |
-| `/tasks`     | POST   | Creates a new task. Requires title, description, and status in the request body. |
-| `/tasks/:id` | GET    | Retrieves details for a specific task.                                    |
-| `/tasks/:id` | PUT    | Updates details for a specific task.                                      |
-| `/tasks/:id` | DELETE | Deletes a specific task.                                                  |
-| `/users`     | GET    | Retrieves a list of all users.                                            |
-| `/users`     | POST   | Creates a new user. Requires username, email, and password in the request body. |
-| `/users/:id` | GET    | Retrieves details for a specific user.                                    |
-| `/users/:id` | PUT    | Updates details for a specific user.                                      |
-| `/users/:id` | DELETE | Deletes a specific user.                                                  |
+   This will start the Go API server, connecting to the MariaDB instance.                                     |
 
 
 ## Improvement and Enhancements
@@ -96,6 +95,9 @@ The project's dependencies are managed using Go modules (go.mod). No additional 
 - **Deployment:** Choose a hosting platform that supports Go applications and MariaDB (e.g., Heroku, AWS, GCP) for deployment. Follow deployment instructions specific to the chosen platform.
 - **Testing:** Implement unit and integration tests to ensure code functionality and database interactions are working as expected.
 - **Authentication:** Enhance security by implementing token-based authentication for user access control. This can be achieved using JWT (JSON Web Tokens) or OAuth2.
+
+
+## Resources
 
 **Project Helper videos:**
 
