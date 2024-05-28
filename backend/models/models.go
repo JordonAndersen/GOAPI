@@ -17,7 +17,7 @@ type Task struct {
 	UserID      uint      `json:"user_id"`
 	Title       string    `json:"title" gorm:"not null" validate:"required"`
 	Description string    `json:"description"`
-	Status      boolean   `json:"status"`
+	Status      string    `json:"status"`
 	CreatedAt   time.Time `json:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at"`
 }
