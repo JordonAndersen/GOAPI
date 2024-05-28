@@ -1,7 +1,8 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2"           // Import Fiber web framework
+	"github.com/gofiber/fiber/v2" // Import Fiber web framework
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/group3/tasks_mgmt/database" // Import the database package from your project
 )
 
@@ -10,6 +11,12 @@ func main() {
 	app := fiber.New()   // Create a new Fiber application
 
 	setupRoutes(app) // Set up the API routes
+
+	//cors config
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "http://localhost:3000",
+		AllowHeaders: "Origin, Content-Type, Accept",
+	}))
 
 	app.Listen("0.0.0.0:3000") // Start the server on port 3000
 }
