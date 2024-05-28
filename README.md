@@ -1,6 +1,5 @@
 **Project Name:** Task Management System
 
-
 **Description:**
 
 This project implements a task management system using Go and MariaDB. Users can:
@@ -13,17 +12,39 @@ This project implements a task management system using Go and MariaDB. Users can
 - **Basic User Management:** CRUD operations for user profiles.
 - **Task Management:** CRUD operations for tasks.
 
-
-
-**Project Setup:**
+## Project Setup
 
 **Backend Development:**
 
 An initial backend development for the task management Go app has been completed.
 
+## Database Schema
+
+### User Table
+
+| Column       | Type      | Description                              |
+|--------------|-----------|------------------------------------------|
+| ID           | uint      | Primary key                              |
+| Username     | string    | Unique username, not null                |
+| Password     | string    | Password, not null                       |
+| Email        | string    | Email address, required                  |
+| Tasks        | []Task    | User's tasks, with foreign key to Task   |
+
+### Task Table
+
+| Column       | Type       | Description                              |
+|--------------|------------|------------------------------------------|
+| ID           | uint       | Primary key                              |
+| UserID       | uint       | Foreign key to User                      |
+| Title        | string     | Title of the task, required              |
+| Description  | string     | Description of the task                  |
+| Status       | string     | Status of the task                       |
+| CreatedAt    | time.Time  | Creation timestamp                       |
+| UpdatedAt    | time.Time  | Last update timestamp                    |
+
 **Forking the Repository:**
 
-1. Visit the project repository on GitHub: https://github.com/JordonAndersen/GOAPI
+1. Visit the project repository on GitHub: [GOAPI](https://github.com/JordonAndersen/GOAPI)
 2. Click the "Fork" button in the top right corner. This will create a copy of the repository in your own GitHub account.
 
 **Cloning Your Fork:**
@@ -71,24 +92,12 @@ The project's dependencies are managed using Go modules (go.mod). No additional 
 
 **Tasks Remaining:**
 
-**Frontend Development:**
-
-Consider creating a frontend application (e.g., React, Angular) to provide a user interface for interacting with the API.
-
-**Deployment:**
-
-Choose a hosting platform that supports Go applications and MariaDB (e.g., Heroku, AWS, GCP) for deployment. Follow deployment instructions specific to the chosen platform.
-
-**Testing:**
-
-Implement unit and integration tests to ensure code functionality and database interactions are working as expected.
-
-**Authentication:**
-
-Enhance security by implementing token-based authentication for user access control. This can be achieved using JWT (JSON Web Tokens) or OAuth2.
-
-
+- **Frontend Development:** Consider creating a frontend application (e.g., React, Angular) to provide a user interface for interacting with the API.
+- **Deployment:** Choose a hosting platform that supports Go applications and MariaDB (e.g., Heroku, AWS, GCP) for deployment. Follow deployment instructions specific to the chosen platform.
+- **Testing:** Implement unit and integration tests to ensure code functionality and database interactions are working as expected.
+- **Authentication:** Enhance security by implementing token-based authentication for user access control. This can be achieved using JWT (JSON Web Tokens) or OAuth2.
 
 **Project Helper videos:**
-https://www.youtube.com/watch?v=QevhhM_QfbM
-https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54
+
+- [Video 1](https://www.youtube.com/watch?v=QevhhM_QfbM)
+- [Video 2](https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54)
