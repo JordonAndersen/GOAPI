@@ -32,9 +32,9 @@ function AddTask({mutate}: {mutate: KeyedMutator<Todo[]>}){
       }
     
 
-
    return ( 
     <>
+    <h1 className='center'>Get Organized, Get Things Done: Welcome to the GO Task Manager!</h1>
     <Modal className='box' opened={open} onClose={() => setOpen(false)} title="Create Task">
     <form onSubmit={form.onSubmit(createTask)}>
     
@@ -42,11 +42,13 @@ function AddTask({mutate}: {mutate: KeyedMutator<Todo[]>}){
       <div className="modal__title"><TextInput
             required
             mb={12}
-            label="Task Name"
+            label="Task Name"      
             placeholder="What task would you like to create?"
+
             {...form.getInputProps("title")}
           /></div>
       <div className="modal__title"> <Textarea
+      
             required
             mb={12}
             label="Description"
@@ -57,9 +59,7 @@ function AddTask({mutate}: {mutate: KeyedMutator<Todo[]>}){
             Create Task</Button>
     </div>
 
-
         
-
 
       
         
@@ -71,7 +71,7 @@ function AddTask({mutate}: {mutate: KeyedMutator<Todo[]>}){
   </Modal>
 
   <Group style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    <Button fullWidth mb={12} onClick={() => setOpen(true)}>
+    <Button className="modal__btn" fullWidth mb={12} onClick={() => setOpen(true)}>
         Add Task
     </Button>
 
@@ -82,3 +82,4 @@ function AddTask({mutate}: {mutate: KeyedMutator<Todo[]>}){
 }
 
 export default AddTask;
+
