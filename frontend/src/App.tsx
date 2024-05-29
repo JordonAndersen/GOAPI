@@ -12,7 +12,7 @@ export interface Todo{
 
 }
 
-export const ENDPOINT = `http//:localhost:3000`
+export const ENDPOINT = "http//:localhost:3000"
 
 const fetcher = (url:string) => fetch(`${ENDPOINT}/${url}`).then((r) => r.json());
 
