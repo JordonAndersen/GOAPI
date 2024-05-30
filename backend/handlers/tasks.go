@@ -17,6 +17,9 @@ func CreateTask(c *fiber.Ctx) error {
 	if err := c.BodyParser(task); err != nil { // Parse the request body into the task model
 		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
 	}
+
+	userID := uint(1)                   // Get the user ID from the request context or session
+	task.UserID = userID                // Set the UserID of the task to link it to the user
 	database.DB.Db.Create(task)         // Save the new task to the database
 	return c.SendString("Task created") // Return a success message
 }
