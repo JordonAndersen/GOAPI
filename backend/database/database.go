@@ -18,8 +18,8 @@ type Dbinstance struct {
 var DB Dbinstance // Create a global variable to access the database connection
 
 func ConnectDb() {
-	dsn := fmt.Sprintf( // Data Source Name (DSN) for connecting to the database
-		"%s:%s@tcp(backend-db-1:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+	dsn := fmt.Sprintf(
+		"%s:%s@tcp(db:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		os.Getenv("DB_USER"),     // Database user
 		os.Getenv("DB_PASSWORD"), // Database password
 		os.Getenv("DB_NAME"),     // Database name

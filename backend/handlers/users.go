@@ -8,8 +8,9 @@ import (
 
 func GetUsers(c *fiber.Ctx) error {
 	var users []models.User
-	database.DB.Db.Find(&users) // Retrieve all users from the database
-	return c.JSON(users)        // Return the users as a JSON response
+	// Preload the tasks associated with each user
+	database.DB.Db.Preload("Tasks").Find(&users)
+	return c.JSON(users)
 }
 
 func CreateUser(c *fiber.Ctx) error {
