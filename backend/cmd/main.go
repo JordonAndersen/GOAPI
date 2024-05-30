@@ -10,13 +10,14 @@ func main() {
 	database.ConnectDb() // Connect to the database
 	app := fiber.New()   // Create a new Fiber application
 
-	setupRoutes(app) // Set up the API routes
-
-	//cors config
+	// CORS configuration
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:3000",
+		AllowOrigins: "http://localhost:5173",
 		AllowHeaders: "Origin, Content-Type, Accept",
+		AllowMethods: "GET, POST, PUT, DELETE",
 	}))
+
+	setupRoutes(app) // Set up the API routes
 
 	app.Listen("0.0.0.0:3000") // Start the server on port 3000
 }
