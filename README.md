@@ -76,7 +76,7 @@ This project implements a task management system using Go and MariaDB. Users can
 ## Tasks Completed and Remaining
 
 **Completed:**
-- Initial backend development for the task management Go app.
+- Backend development: Go API for the task management.
 
 **In Progress:**
 - Frontend development: React application for user interface.
