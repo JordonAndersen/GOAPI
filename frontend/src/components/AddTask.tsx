@@ -18,19 +18,23 @@ function AddTask({mutate}: {mutate: KeyedMutator<Todo[]>}){
     })
 
     async function createTask(values: { title: string; Description: string }) {
-        const updated = await fetch(`${ENDPOINT}/tasks`, {
+      // Assuming userID is available from somewhere in your frontend, replace '1' with the actual user ID
+      const userID = 1; // Replace '1' with the actual user ID
+      const taskData = { ...values, userID }; // Include user ID in task data
+  
+      const updated = await fetch(`${ENDPOINT}/tasks`, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+              "Content-Type": "application/json",
           },
-          body: JSON.stringify(values),
-        }).then((r) => r.json());
-    
-        mutate(updated);
-        form.reset();
-        setOpen(false);
-      }
-    
+          body: JSON.stringify(taskData),
+      }).then((r) => r.json());
+  
+      mutate(updated);
+      form.reset();
+      setOpen(false);
+  }
+  
 
    return ( 
     <>

@@ -2,7 +2,13 @@
 
 ## Description
 
-This project implements a task management system using Go and MariaDB. Users can perform CRUD operations for user profiles and tasks.
+This project is an implementation of a task management system utilizing Go and MariaDB. It provides functionalities for managing user profiles and tasks, with a frontend developed in React. Users can seamlessly perform CRUD operations, including creating, reading, updating, and deleting tasks and user profiles through the React-based interface.
+
+**Go Programming Language:**
+Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+
+[golang.org](https://golang.org)
+
 
 ## Database Schema
 
@@ -73,10 +79,10 @@ This project implements a task management system using Go and MariaDB. Users can
      npm run dev
      ```
 
-## Tasks Completed and Remaining
+## Project Status
 
 **Completed:**
-- Backend development: Go API for the task management.
+- Backend development: Go REST API for Task Management using MariaDB and Docker.
 
 **In Progress:**
 - Frontend development: React application for user interface.
@@ -88,6 +94,6 @@ This project implements a task management system using Go and MariaDB. Users can
 
 ## Resources
 
-- **Project Helper Videos:**
-  - [Video 1](https://www.youtube.com/watch?v=QevhhM_QfbM)
-  - [Video 2](https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54)
+**Project Helper Videos:**
+- [Build a REST API from scratch with Go, Docker & Postgres](https://dev.to/divrhino/build-a-rest-api-from-scratch-with-go-and-docker-3o54)
+- [Build a Go REST API, React.js & TypeScript Todo App](https://www.youtube.com/watch?v=QevhhM_QfbM)
