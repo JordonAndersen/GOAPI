@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2" // Import Fiber web framework
-	"github.com/gofiber/fiber/v2/middleware/cors"
-	"github.com/group3/tasks_mgmt/database" // Import the database package from your project
+	"github.com/gofiber/fiber/v2"                 // Import Fiber web framework
+	"github.com/gofiber/fiber/v2/middleware/cors" // Import middleware pkg for enabling Cross-Origin Resource Sharing (CORS)
+	"github.com/group3/tasks_mgmt/database"       // Import custom pkg containing database connection logic
 )
 
 func main() {
