@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/group3/tasks_mgmt/models" // Import models package from your project
+	"github.com/group3/tasks_mgmt/models" // Import custom pkg containing database connection logic
 	"gorm.io/driver/mysql"                // Import MySQL driver for GORM
 	"gorm.io/gorm"                        // Import GORM
 )
@@ -40,7 +40,7 @@ func ConnectDb() {
 	log.Println("Connected to database")
 
 	log.Println("Running migrations...")
-	db.AutoMigrate(&models.User{}, &models.Task{}) // Run migrations to create/update database schema
+	db.AutoMigrate(&models.User{}, &models.Task{}, &models.SimpleTask{}) // Run migrations to create/update database schema
 
 	DB = Dbinstance{Db: db} // Assign the database connection to the global variable
 }

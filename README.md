@@ -2,13 +2,35 @@
 
 ## Description
 
-This project is an implementation of a task management system utilizing Go and MariaDB. It provides functionalities for managing user profiles and tasks, with a frontend developed in React. Users can seamlessly perform CRUD operations, including creating, reading, updating, and deleting tasks and user profiles through the React-based interface.
+This project is an implementation of a task management system utilizing Go and MariaDB. It provides functionalities for managing user profiles and tasks, with a frontend developed in React. Users can seamlessly perform CRUD operations for tasks and user profiles through the React-based interface.
 
-**Go Programming Language:**
-Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+## Tools Used
 
-[golang.org](https://golang.org)
+### Backend:
+- **Go**: An open source programming language used for the backend server.
 
+- **Go Fiber**: A web framework for Go, used for building APIs and handling HTTP requests.
+
+- **GORM**: Go Object–Relational Mapping (ORM) for database interactions.
+
+- **Air**: A live-reloading tool for Go applications used during development to automatically reload the server when code changes are made.
+
+- **MariaDB**: A popular open-source relational database management system used for the backend database.
+
+- **Docker**: Used for containerizing the application and database services.
+
+- **Docker Compose**: Used to define and manage multi-container Docker applications.
+
+### Frontend:
+- **React**: The main library for building the user interface.
+
+- **Vite**: A build tool and development server for fast and optimized development of modern web applications.
+
+- **TypeScript**: Typed superset of JavaScript for improved code quality and developer productivity.
+
+- **Mantine**: A React component library providing various UI components for building the frontend.
+
+- **SWR**: A React hook library for data fetching and caching.
 
 ## Database Schema
 
@@ -34,20 +56,38 @@ Go is an open source programming language that makes it easy to build simple, re
 | CreatedAt  | time.Time  | Creation timestamp                     |
 | UpdatedAt  | time.Time  | Last update timestamp                  |
 
+### SimpleTask Table
+
+| Column     | Type       | Description                            |
+|------------|------------|----------------------------------------|
+| ID         | uint       | Primary key                            |
+| Title      | string     | Title of the task, required            |
+| Description| string     | Description of the task                |
+| Status     | bool       | Status of the task                     |
+| CreatedAt  | time.Time  | Creation timestamp                     |
+| UpdatedAt  | time.Time  | Last update timestamp                  |
+
+
 ## API Endpoints
 
-| Endpoint     | Method | Description                               |
-|--------------|--------|-------------------------------------------|
-| `/tasks`     | GET    | Retrieves a list of all tasks.            |
-| `/tasks`     | POST   | Creates a new task.                       |
-| `/tasks/:id` | GET    | Retrieves details for a specific task.    |
-| `/tasks/:id` | PUT    | Updates details for a specific task.      |
-| `/tasks/:id` | DELETE | Deletes a specific task.                  |
-| `/users`     | GET    | Retrieves a list of all users.            |
-| `/users`     | POST   | Creates a new user.                       |
-| `/users/:id` | GET    | Retrieves details for a specific user.    |
-| `/users/:id` | PUT    | Updates details for a specific user.      |
-| `/users/:id` | DELETE | Deletes a specific user.                  |
+| Endpoint          | Method | Description                              |
+|-------------------|--------|------------------------------------------|
+| `/tasks`          | GET    | Retrieves a list of all tasks.           |
+| `/tasks`          | POST   | Creates a new task.                      |
+| `/tasks/:id`      | GET    | Retrieves details for a specific task.   |
+| `/tasks/:id`      | PUT    | Updates details for a specific task.     |
+| `/tasks/:id`      | DELETE | Deletes a specific task.                 |
+| `/users`          | GET    | Retrieves a list of all users.           |
+| `/users`          | POST   | Creates a new user.                      |
+| `/users/:id`      | GET    | Retrieves details for a specific user.   |
+| `/users/:id`      | PUT    | Updates details for a specific user.     |
+| `/users/:id`      | DELETE | Deletes a specific user.                 |
+| `/simple-tasks`   | GET    | Retrieves a list of simple tasks.        |
+| `/simple-tasks`   | POST   | Creates a new simple task.               |
+| `/simple-tasks/:id`| GET   | Retrieves details for a specific simple task.|
+| `/simple-tasks/:id`| PUT   | Updates details for a specific simple task.|
+| `/simple-tasks/:id`| DELETE| Deletes a specific simple task.          |
+
 
 ## Project Setup
 
